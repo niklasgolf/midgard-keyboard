@@ -281,6 +281,26 @@ for (const [id, arrow] of Object.entries(layer2BArrows)) {
   key.ariaLabel = arrow
 }
 
+const layer2BNav: Record<string, string> = {
+  'lh-c1-r1': 'Home',
+  'lh-c2-r1': 'PgUp',
+  'lh-c3-r1': 'PgDn',
+  'lh-c4-r1': 'End'
+}
+
+for (const [id, label] of Object.entries(layer2BNav)) {
+  const key = midGardLayer2B[id]
+  key.primary = label
+  key.primarySize = 14
+  key.primaryPlacement = 'center'
+  key.primaryClassName = 'label-tight'
+  key.ariaLabel = label
+}
+
+const forwardDelete = midGardLayer2B['rh-c2-r3']
+forwardDelete.primary = '⌦'
+forwardDelete.ariaLabel = 'forward delete'
+
 for (const layer of [midGardLayer1B, midGardLayer2B]) {
   for (const key of Object.values(layer)) {
     if (key.primary !== '-') continue
