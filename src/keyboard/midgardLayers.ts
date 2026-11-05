@@ -268,6 +268,19 @@ for (const key of Object.values(midGardLayer2B)) {
   delete key.secondary
 }
 
+const layer2BArrows: Record<string, string> = {
+  'lh-c1-r2': '←',
+  'lh-c2-r2': '↑',
+  'lh-c3-r2': '↓',
+  'lh-c4-r2': '→'
+}
+
+for (const [id, arrow] of Object.entries(layer2BArrows)) {
+  const key = midGardLayer2B[id]
+  key.primary = arrow
+  key.ariaLabel = arrow
+}
+
 for (const layer of [midGardLayer1B, midGardLayer2B]) {
   for (const key of Object.values(layer)) {
     if (key.primary !== '-') continue
