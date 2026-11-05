@@ -24,6 +24,7 @@
   --key-white: #ffffff;
   --key-yellow: #feff4d;
   --key-pink: #ff80c0;
+  --key-purple: #8040d8;
   --key-accent: oklch(0.757 0.194 159);
   --key-accent-deep: oklch(0.68 0.17 159);
   --key-accent-ink: rgb(72, 72, 72);
@@ -398,6 +399,16 @@ body {
   --key-face: var(--key-pink);
 }
 
+.key-purple {
+  background: var(--key-purple);
+  color: #000000;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
+}
+
+.key-purple::before {
+  background: none;
+}
+
 .key-accent {
   background: linear-gradient(180deg, oklch(0.82 0.19 159) 0%, var(--key-accent) 48%, var(--key-accent-deep) 100%);
   color: var(--key-accent-ink);
@@ -433,6 +444,11 @@ body {
 .key-label.key-home {
   font-size: 27px;
   font-weight: 800;
+}
+
+.key-label.key-home.key-fit {
+  font-size: 20px;
+  letter-spacing: -0.03em;
 }
 
 .key-label[data-place="top"] {
