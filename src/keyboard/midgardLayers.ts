@@ -344,6 +344,26 @@ for (const [id, label] of Object.entries(layer2BFunctions)) {
   delete key.secondary
 }
 
+const layer1BFunctions: Record<string, string> = {
+  'lh-c1-r0': 'F13',
+  'lh-c2-r0': 'F14',
+  'lh-c3-r0': 'F15',
+  'lh-c4-r0': 'F16',
+  'lh-c5-r0': 'F17',
+  'rh-c5-r0': 'F18',
+  'rh-c4-r0': 'F19'
+}
+
+for (const [id, label] of Object.entries(layer1BFunctions)) {
+  const key = midGardLayer1B[id]
+  key.primary = label
+  key.primaryPlacement = 'center'
+  key.primaryClassName = 'key-home key-fit'
+  key.className = 'key-purple'
+  key.ariaLabel = label
+  delete key.secondary
+}
+
 function layoutFor(
   id: string,
   layer: string,
