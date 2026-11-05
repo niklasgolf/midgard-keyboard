@@ -76,22 +76,22 @@ function layer1(): Record<string, KeyAssignment> {
     'lh-c0-r2': marked('⌥', 'option', yellow),
     'lh-c0-r3': marked('⌃', 'control', yellow),
 
-    'lh-c1-r0': symbol('-', blue),
+    'lh-c1-r0': symbol('—', blue),
     'lh-c1-r1': symbol('B', blue),
     'lh-c1-r2': symbol('A', blue),
     'lh-c1-r3': marked('⌘', 'command', yellow),
 
-    'lh-c2-r0': symbol('\'', blue),
+    'lh-c2-r0': symbol('´', blue),
     'lh-c2-r1': symbol('W', blue),
     'lh-c2-r2': symbol('R', blue),
     'lh-c2-r3': symbol('X', blue),
 
-    'lh-c3-r0': symbol('\'', blue),
+    'lh-c3-r0': symbol('`', blue),
     'lh-c3-r1': symbol('F', blue),
     'lh-c3-r2': symbol('S', blue),
     'lh-c3-r3': symbol('C', blue),
 
-    'lh-c4-r0': symbol(',', orange),
+    'lh-c4-r0': symbol('\'', orange),
     'lh-c4-r1': symbol('P', blue),
     'lh-c4-r2': symbol('T', blue),
     'lh-c4-r3': symbol('V', blue),
