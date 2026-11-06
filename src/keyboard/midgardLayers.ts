@@ -364,6 +364,24 @@ for (const [id, label] of Object.entries(layer1BFunctions)) {
   delete key.secondary
 }
 
+const layer2BShortcuts: Record<string, { letter: string, action: string }> = {
+  'lh-c2-r3': { letter: 'X', action: 'Cut' },
+  'lh-c3-r3': { letter: 'C', action: 'Copy' },
+  'lh-c4-r3': { letter: 'V', action: 'Paste' }
+}
+
+for (const [id, shortcut] of Object.entries(layer2BShortcuts)) {
+  const key = midGardLayer2B[id]
+  key.primary = shortcut.letter
+  key.primaryPlacement = 'bottom'
+  key.primarySize = 22
+  delete key.primaryClassName
+  key.secondary = [{ text: '⌘', placement: 'top', size: 15 }]
+  key.className = 'key-blue key-shortcut'
+  key.ariaLabel = `Command ${shortcut.letter}, ${shortcut.action}`
+  key.note = shortcut.action
+}
+
 function layoutFor(
   id: string,
   layer: string,

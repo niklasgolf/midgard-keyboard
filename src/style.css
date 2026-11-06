@@ -494,6 +494,23 @@ body {
   bottom: calc(9px + var(--nudge, 0px));
 }
 
+.key-shortcut .key-label {
+  color: #000000;
+  letter-spacing: 0;
+}
+
+.key-shortcut .key-label[data-place="top"] {
+  top: 10px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.key-shortcut .key-label[data-place="bottom"] {
+  bottom: 8px;
+  font-size: 22px;
+  font-weight: 800;
+}
+
 .key-pair .key-label[data-place="top"] {
   top: 3px;
 }
