@@ -75,11 +75,23 @@ function createKeyboardTitle(layout: KeyboardLayout): HTMLElement {
   return title
 }
 
+const homeKeyIds = new Set([
+  'lh-c1-r2',
+  'lh-c2-r2',
+  'lh-c3-r2',
+  'lh-c4-r2',
+  'rh-c4-r2',
+  'rh-c3-r2',
+  'rh-c2-r2',
+  'rh-c1-r2'
+])
+
 function createKey(key: KeyboardKeyData, index: number): HTMLElement {
   const el = document.createElement('div')
   const classes = ['key']
   if (key.variant === 'accent') classes.push('key-accent')
   if (key.className) classes.push(key.className)
+  if (homeKeyIds.has(key.id)) classes.push('key-home')
   el.className = classes.join(' ')
   el.dataset.keyId = key.id
   if (key.note) el.dataset.note = key.note
