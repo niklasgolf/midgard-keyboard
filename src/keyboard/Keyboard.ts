@@ -67,11 +67,19 @@ function createKeyboardTitle(layout: KeyboardLayout): HTMLElement {
   kicker.className = 'keyboard-title-kicker'
   kicker.textContent = layout.title.kicker
 
-  const layer = document.createElement('p')
-  layer.className = 'keyboard-title-layer'
-  layer.textContent = layout.title.layer
+  title.append(kicker)
 
-  title.append(kicker, layer)
+  if (layout.id === 'midgard-2b') {
+    const note = document.createElement('p')
+    note.className = 'keyboard-title-note'
+    note.append(
+      document.createTextNode('Hold Tab to activate Shift + Layer 2.'),
+      document.createElement('br'),
+      document.createTextNode('Easy access to å ä ö and Å Ä Ö.')
+    )
+    title.append(note)
+  }
+
   return title
 }
 

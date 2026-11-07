@@ -299,18 +299,15 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-top: 8px;
   gap: 5px;
   pointer-events: none;
   text-align: center;
 }
 
-.keyboard-title-kicker,
-.keyboard-title-layer {
-  margin: 0;
-}
-
 .keyboard-title-kicker {
+  margin: 0;
   font-size: 17px;
   font-weight: 600;
   letter-spacing: 0.11em;
@@ -318,13 +315,18 @@ body {
   text-shadow: 0 0 16px rgba(138, 216, 244, 0.28);
 }
 
-.keyboard-title-layer {
-  font-family: var(--font-mono);
-  font-size: 12px;
+.keyboard-title-note {
+  position: absolute;
+  top: 43px;
+  left: 0;
+  right: 0;
+  margin: 0;
+  font-size: 15px;
   font-weight: 500;
-  letter-spacing: 0.22em;
-  color: var(--lime);
-  text-shadow: 0 0 12px rgba(198, 245, 138, 0.3);
+  line-height: 1.3;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #ffe56a;
 }
 
 .key {

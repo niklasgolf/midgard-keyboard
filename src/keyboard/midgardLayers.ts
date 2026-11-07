@@ -382,6 +382,26 @@ for (const [id, shortcut] of Object.entries(layer2BShortcuts)) {
   key.note = shortcut.action
 }
 
+const layer2BSwedish: Record<string, string> = {
+  'rh-c3-r1': 'Å',
+  'rh-c2-r1': 'Ä',
+  'rh-c1-r1': 'Ö',
+  'rh-c3-r2': 'å',
+  'rh-c2-r2': 'ä',
+  'rh-c1-r2': 'ö'
+}
+
+for (const [id, letter] of Object.entries(layer2BSwedish)) {
+  const key = midGardLayer2B[id]
+  key.primary = letter
+  key.primaryPlacement = 'center'
+  key.primarySize = 18
+  key.primaryClassName = 'key-home'
+  key.className = 'key-green'
+  key.ariaLabel = letter
+  delete key.secondary
+}
+
 function layoutFor(
   id: string,
   layer: string,
