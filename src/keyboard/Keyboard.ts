@@ -18,7 +18,7 @@ export function createKeyboardPanel(title: string, layout: KeyboardLayout): HTML
 
   const meta = document.createElement('p')
   meta.className = 'panel-meta'
-  meta.textContent = 'EN-US  ·  QWERTY'
+  meta.textContent = 'Colemak QBZHMK - ARST NEIO'
 
   head.append(heading, meta)
 
@@ -73,9 +73,11 @@ function createKeyboardTitle(layout: KeyboardLayout): HTMLElement {
     const note = document.createElement('p')
     note.className = 'keyboard-title-note'
     note.append(
-      document.createTextNode('Hold Tab to activate Shift + Layer 2.'),
+      document.createTextNode('Hold Tab or Return to activate Shift + Layer 2.'),
       document.createElement('br'),
-      document.createTextNode('Easy access to å ä ö and Å Ä Ö.')
+      document.createTextNode('Quick access to å ä ö, Å Ä Ö, and arrow keys,'),
+      document.createElement('br'),
+      document.createTextNode('plus Home, PgUp, PgDn, and End.')
     )
     title.append(note)
   }

@@ -382,6 +382,36 @@ for (const [id, shortcut] of Object.entries(layer2BShortcuts)) {
   key.note = shortcut.action
 }
 
+const optionBackspace = midGardLayer2B['rh-c4-r2']
+optionBackspace.primary = '⌫'
+optionBackspace.primaryPlacement = 'bottom'
+optionBackspace.primarySize = 22
+delete optionBackspace.primaryClassName
+optionBackspace.secondary = [{ text: '⌥', placement: 'top', size: 15 }]
+optionBackspace.className = 'key-blue key-shortcut'
+optionBackspace.ariaLabel = 'Option Backspace, delete previous word'
+optionBackspace.note = 'Delete previous word'
+
+const commandBackspace = midGardLayer2B['rh-c4-r1']
+commandBackspace.primary = '⌫'
+commandBackspace.primaryPlacement = 'bottom'
+commandBackspace.primarySize = 22
+delete commandBackspace.primaryClassName
+commandBackspace.secondary = [{ text: '⌘', placement: 'top', size: 15 }]
+commandBackspace.className = 'key-blue key-shortcut'
+commandBackspace.ariaLabel = 'Command Backspace, delete to start of line'
+commandBackspace.note = 'Delete to start of line'
+
+const optionForwardDelete = midGardLayer2B['rh-c3-r3']
+optionForwardDelete.primary = '⌦'
+optionForwardDelete.primaryPlacement = 'bottom'
+optionForwardDelete.primarySize = 22
+delete optionForwardDelete.primaryClassName
+optionForwardDelete.secondary = [{ text: '⌥', placement: 'top', size: 15 }]
+optionForwardDelete.className = 'key-blue key-shortcut'
+optionForwardDelete.ariaLabel = 'Option Forward Delete, delete next word'
+optionForwardDelete.note = 'Delete next word'
+
 const layer2BSwedish: Record<string, string> = {
   'rh-c3-r1': 'Å',
   'rh-c2-r1': 'Ä',
